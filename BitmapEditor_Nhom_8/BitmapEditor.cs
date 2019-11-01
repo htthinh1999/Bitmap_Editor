@@ -47,7 +47,7 @@ namespace BitmapEditor_Nhom_8
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
-                Title = "Browse Text Files",
+                Title = "Browse Image File",
 
                 CheckFileExists = true,
                 CheckPathExists = true,
@@ -246,6 +246,11 @@ namespace BitmapEditor_Nhom_8
                 MessageBox.Show("You must open an image first!!", "Warning!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bm.Save("C:\\HELLO.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
     }

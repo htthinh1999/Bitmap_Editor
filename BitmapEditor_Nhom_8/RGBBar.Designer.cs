@@ -43,30 +43,30 @@
             // 
             // trkBarR
             // 
-            this.trkBarR.Location = new System.Drawing.Point(80, 18);
+            this.trkBarR.Location = new System.Drawing.Point(97, 18);
             this.trkBarR.Maximum = 20;
             this.trkBarR.Name = "trkBarR";
-            this.trkBarR.Size = new System.Drawing.Size(252, 45);
+            this.trkBarR.Size = new System.Drawing.Size(235, 45);
             this.trkBarR.TabIndex = 0;
             this.trkBarR.Value = 10;
             this.trkBarR.Scroll += new System.EventHandler(this.trkBarR_Scroll);
             // 
             // trkBarG
             // 
-            this.trkBarG.Location = new System.Drawing.Point(80, 72);
+            this.trkBarG.Location = new System.Drawing.Point(97, 72);
             this.trkBarG.Maximum = 20;
             this.trkBarG.Name = "trkBarG";
-            this.trkBarG.Size = new System.Drawing.Size(252, 45);
+            this.trkBarG.Size = new System.Drawing.Size(235, 45);
             this.trkBarG.TabIndex = 1;
             this.trkBarG.Value = 10;
             this.trkBarG.Scroll += new System.EventHandler(this.trkBarG_Scroll);
             // 
             // trkBarB
             // 
-            this.trkBarB.Location = new System.Drawing.Point(80, 123);
+            this.trkBarB.Location = new System.Drawing.Point(97, 123);
             this.trkBarB.Maximum = 20;
             this.trkBarB.Name = "trkBarB";
-            this.trkBarB.Size = new System.Drawing.Size(252, 45);
+            this.trkBarB.Size = new System.Drawing.Size(235, 45);
             this.trkBarB.TabIndex = 2;
             this.trkBarB.Value = 10;
             this.trkBarB.Scroll += new System.EventHandler(this.trkBarB_Scroll);
@@ -116,6 +116,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(338, 94);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
