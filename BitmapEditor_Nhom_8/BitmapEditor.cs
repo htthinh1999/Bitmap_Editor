@@ -25,7 +25,7 @@ namespace BitmapEditor_Nhom_8
         private String imagePath;
         private Bitmap bm;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnOpen_Click(object sender, EventArgs e)
         {
 
             OpenFileDialog openFileDialog1 = new OpenFileDialog
@@ -40,7 +40,6 @@ namespace BitmapEditor_Nhom_8
                 Filter = "jpg files (*.jpg)|*.jpg",
                 FilterIndex = 2,
                 RestoreDirectory = true,
-
             };
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -48,7 +47,6 @@ namespace BitmapEditor_Nhom_8
                 imagePath = openFileDialog1.FileName;
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
-                //pictureBox1.Scale(50);
             }
         }
 
