@@ -24,11 +24,12 @@ namespace BitmapEditor_Nhom_8
         }
 
         private String imagePath;
-        private Bitmap bm=null;
+        private Bitmap bm = null;
+        private int scale = 0;
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-
+            scale = 0;
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
@@ -38,8 +39,8 @@ namespace BitmapEditor_Nhom_8
                 CheckPathExists = true,
 
                 DefaultExt = ".jpg",
-                Filter = "jpg files (*.jpg)|*.jpg",
-                FilterIndex = 2,
+                Filter = "All files (*.*)|*.*|jpg files (*.jpg)|*.jpg|jpeg files (*.jpeg)|*.jpeg",
+                FilterIndex = 1,
                 RestoreDirectory = true,
             };
 
@@ -57,6 +58,7 @@ namespace BitmapEditor_Nhom_8
             {
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
+                scaleImage(scale);
             }
             else
             {
@@ -92,6 +94,9 @@ namespace BitmapEditor_Nhom_8
                 // Unlock bits
                 bm.UnlockBits(bmData);
                 pictureBox1.Image = bm;
+
+                // Scale Image
+                scaleImage(scale);
             }
             else
             {
@@ -99,13 +104,25 @@ namespace BitmapEditor_Nhom_8
             }
         }
 
+        private Size newSize;
+        private void scaleImage(int scale)
+        {
+            if (scale > 0)
+                newSize = new Size((int)(bm.Width * scale), (int)(bm.Height * scale));
+            if (scale < 0)
+                newSize = new Size((int)(bm.Width / Math.Abs(scale)), (int)(bm.Height / Math.Abs(scale)));
+            if (scale == 0)
+                newSize = new Size(bm.Width, bm.Height);
+            Bitmap bmp = new Bitmap(bm, newSize);
+            pictureBox1.Image = bmp;
+        }
+
         private void btnZoomIn_Click(object sender, EventArgs e)
         {
             if (bm != null)
             {
-                Size newSize = new Size((int)(bm.Width * 2), (int)(bm.Height * 2));
-                bm = new Bitmap(bm, newSize);
-                pictureBox1.Image = bm;
+                scale += 2;
+                scaleImage(scale);
             }
             else
             {
@@ -117,9 +134,8 @@ namespace BitmapEditor_Nhom_8
         {
             if (bm != null)
             {
-                Size newSize = new Size((int)(bm.Width / 2), (int)(bm.Height / 2));
-                bm = new Bitmap(bm, newSize);
-                pictureBox1.Image = bm;
+                scale -= 2;
+                scaleImage(scale);
             }
             else
             {
@@ -133,6 +149,7 @@ namespace BitmapEditor_Nhom_8
             {
                 bm.RotateFlip(RotateFlipType.Rotate270FlipNone);
                 pictureBox1.Image = bm;
+                scaleImage(scale);
             }
             else
             {
@@ -146,6 +163,7 @@ namespace BitmapEditor_Nhom_8
             {
                 bm.RotateFlip(RotateFlipType.Rotate90FlipNone);
                 pictureBox1.Image = bm;
+                scaleImage(scale);
             }
             else
             {
