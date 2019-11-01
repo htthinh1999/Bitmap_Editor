@@ -23,9 +23,19 @@ namespace BitmapEditor_Nhom_8
 
         }
 
+        private Form rbgBar;
         private String imagePath;
         private Bitmap bm = null;
         private int scale = 0;
+
+        private void openRBGBar()
+        {
+            rbgBar = new RBGBar();
+            Point position = this.Location;
+            position.X = this.Right;
+            rbgBar.Location = position;
+            rbgBar.Show();
+        }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
@@ -39,8 +49,8 @@ namespace BitmapEditor_Nhom_8
                 CheckPathExists = true,
 
                 DefaultExt = ".jpg",
-                Filter = "All files (*.*)|*.*|jpg files (*.jpg)|*.jpg|jpeg files (*.jpeg)|*.jpeg",
-                FilterIndex = 1,
+                Filter = "Image |*.bmp;*.jpg;*.jpeg;*.png",
+                //FilterIndex = 1,
                 RestoreDirectory = true,
             };
 
@@ -49,6 +59,8 @@ namespace BitmapEditor_Nhom_8
                 imagePath = openFileDialog1.FileName;
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
+
+                openRBGBar();
             }
         }
 

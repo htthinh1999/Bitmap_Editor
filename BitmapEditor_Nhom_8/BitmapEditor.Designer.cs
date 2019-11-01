@@ -49,6 +49,7 @@
             this.pictureBox1.AccessibleDescription = "Open Image";
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(111, 12);
@@ -85,7 +86,7 @@
             this.btnZoomIn.Name = "btnZoomIn";
             this.btnZoomIn.Size = new System.Drawing.Size(75, 23);
             this.btnZoomIn.TabIndex = 3;
-            this.btnZoomIn.Text = "Zoom (+)";
+            this.btnZoomIn.Text = "Zoom In (+)";
             this.btnZoomIn.UseVisualStyleBackColor = true;
             this.btnZoomIn.Click += new System.EventHandler(this.btnZoomIn_Click);
             // 
@@ -95,7 +96,7 @@
             this.btnZoomOut.Name = "btnZoomOut";
             this.btnZoomOut.Size = new System.Drawing.Size(75, 23);
             this.btnZoomOut.TabIndex = 4;
-            this.btnZoomOut.Text = "Zoom (-)";
+            this.btnZoomOut.Text = "Zoom Out (-)";
             this.btnZoomOut.UseVisualStyleBackColor = true;
             this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
             // 
@@ -143,6 +144,7 @@
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.pictureBox1);
             this.Name = "BitmapEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bitmap Editor";
             this.Load += new System.EventHandler(this.BitmapEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
