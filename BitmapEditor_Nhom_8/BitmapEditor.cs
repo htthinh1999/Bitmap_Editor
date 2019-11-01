@@ -74,11 +74,12 @@ namespace BitmapEditor_Nhom_8
                 int offset = bmData.Stride - bm.Width * 3;
                 byte* p = (byte*)bmData.Scan0;
 
+                // Duyet anh bitmap
                 for (int i = 0; i < bm.Width; i++)
                 {
                     for(int j=0; j<bm.Height; j++)
                     {
-                        int t = (p[0] + p[1] + p[2]) / 3; //p[0] is blue, p[1] is green, p[2] is red
+                        int t = (p[0] + p[1] + p[2]) / 3; //p[0] la xanh bien, p[1] la xanh la, p[2] la do
                         p[0] = (byte)t;
                         p[1] = (byte)t;
                         p[2] = (byte)t;
@@ -102,7 +103,9 @@ namespace BitmapEditor_Nhom_8
         {
             if (bm != null)
             {
-
+                Size newSize = new Size((int)(bm.Width * 2), (int)(bm.Height * 2));
+                bm = new Bitmap(bm, newSize);
+                pictureBox1.Image = bm;
             }
             else
             {
@@ -114,7 +117,9 @@ namespace BitmapEditor_Nhom_8
         {
             if (bm != null)
             {
-
+                Size newSize = new Size((int)(bm.Width / 2), (int)(bm.Height / 2));
+                bm = new Bitmap(bm, newSize);
+                pictureBox1.Image = bm;
             }
             else
             {
@@ -126,7 +131,8 @@ namespace BitmapEditor_Nhom_8
         {
             if (bm != null)
             {
-
+                bm.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                pictureBox1.Image = bm;
             }
             else
             {
@@ -138,7 +144,8 @@ namespace BitmapEditor_Nhom_8
         {
             if (bm != null)
             {
-
+                bm.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox1.Image = bm;
             }
             else
             {
