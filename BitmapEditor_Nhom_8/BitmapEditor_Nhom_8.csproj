@@ -53,11 +53,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RBGBar.cs">
+    <Compile Include="RGBBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RBGBar.Designer.cs">
-      <DependentUpon>RBGBar.cs</DependentUpon>
+    <Compile Include="RGBBar.Designer.cs">
+      <DependentUpon>RGBBar.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BitmapEditor.resx">
       <DependentUpon>BitmapEditor.cs</DependentUpon>
@@ -71,8 +71,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RBGBar.resx">
-      <DependentUpon>RBGBar.cs</DependentUpon>
+    <EmbeddedResource Include="RGBBar.resx">
+      <DependentUpon>RGBBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

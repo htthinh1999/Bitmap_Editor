@@ -10,24 +10,50 @@ using System.Windows.Forms;
 
 namespace BitmapEditor_Nhom_8
 {
-    public partial class RBGBar : Form
+    public partial class RGBBar : Form
     {
-        public RBGBar()
+        public RGBBar()
         {
             InitializeComponent();
         }
 
-        private int getR()
+        public RGBBar(int rValue, int gValue, int bValue)
+        {
+            InitializeComponent();
+            trkBarR.Value = (int)((double)rValue / 100 * 10 + 10);
+            lblR.Text = "R: " + Convert.ToString(rValue) + "%";
+            trkBarG.Value = (int)((double)gValue / 100 * 10 + 10);
+            lblG.Text = "G: " + Convert.ToString(gValue) + "%";
+            trkBarB.Value = (int)((double)bValue / 100 * 10 + 10);
+            lblB.Text = "B: " + Convert.ToString(bValue) + "%";
+        }
+
+        public void setR(int rValue)
+        {
+            trkBarR.Value = rValue;
+        }
+
+        public void setG(int gValue)
+        {
+            trkBarG.Value = gValue;
+        }
+
+        public void setB(int bValue)
+        {
+            trkBarB.Value = bValue;
+        }
+
+        public int getR()
         {
             return (int)((double)(trkBarR.Value - 10) / 10 * 100);
         }
 
-        private int getG()
+        public int getG()
         {
             return (int)((double)(trkBarG.Value - 10) / 10 * 100);
         }
 
-        private int getB()
+        public int getB()
         {
             return (int)((double)(trkBarB.Value - 10) / 10 * 100);
         }
@@ -46,5 +72,6 @@ namespace BitmapEditor_Nhom_8
         {
             lblB.Text = "B: " + Convert.ToString((double)(trkBarB.Value - 10) / 10 * 100) + "%";
         }
+
     }
 }

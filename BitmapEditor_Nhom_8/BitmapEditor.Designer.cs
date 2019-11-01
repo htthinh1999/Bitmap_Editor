@@ -37,6 +37,7 @@
             this.btnTurnLeft = new System.Windows.Forms.Button();
             this.btnTurnRight = new System.Windows.Forms.Button();
             this.btnOriginal = new System.Windows.Forms.Button();
+            this.btnRGB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             // 
             // btnGray
             // 
-            this.btnGray.Location = new System.Drawing.Point(12, 171);
+            this.btnGray.Location = new System.Drawing.Point(11, 141);
             this.btnGray.Name = "btnGray";
             this.btnGray.Size = new System.Drawing.Size(75, 23);
             this.btnGray.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             // btnZoomIn
             // 
-            this.btnZoomIn.Location = new System.Drawing.Point(12, 200);
+            this.btnZoomIn.Location = new System.Drawing.Point(11, 170);
             this.btnZoomIn.Name = "btnZoomIn";
             this.btnZoomIn.Size = new System.Drawing.Size(75, 23);
             this.btnZoomIn.TabIndex = 3;
@@ -92,7 +93,7 @@
             // 
             // btnZoomOut
             // 
-            this.btnZoomOut.Location = new System.Drawing.Point(12, 229);
+            this.btnZoomOut.Location = new System.Drawing.Point(11, 199);
             this.btnZoomOut.Name = "btnZoomOut";
             this.btnZoomOut.Size = new System.Drawing.Size(75, 23);
             this.btnZoomOut.TabIndex = 4;
@@ -102,7 +103,7 @@
             // 
             // btnTurnLeft
             // 
-            this.btnTurnLeft.Location = new System.Drawing.Point(12, 259);
+            this.btnTurnLeft.Location = new System.Drawing.Point(11, 229);
             this.btnTurnLeft.Name = "btnTurnLeft";
             this.btnTurnLeft.Size = new System.Drawing.Size(75, 23);
             this.btnTurnLeft.TabIndex = 5;
@@ -112,7 +113,7 @@
             // 
             // btnTurnRight
             // 
-            this.btnTurnRight.Location = new System.Drawing.Point(12, 289);
+            this.btnTurnRight.Location = new System.Drawing.Point(11, 259);
             this.btnTurnRight.Name = "btnTurnRight";
             this.btnTurnRight.Size = new System.Drawing.Size(75, 23);
             this.btnTurnRight.TabIndex = 6;
@@ -122,7 +123,7 @@
             // 
             // btnOriginal
             // 
-            this.btnOriginal.Location = new System.Drawing.Point(12, 142);
+            this.btnOriginal.Location = new System.Drawing.Point(11, 112);
             this.btnOriginal.Name = "btnOriginal";
             this.btnOriginal.Size = new System.Drawing.Size(75, 23);
             this.btnOriginal.TabIndex = 7;
@@ -130,11 +131,22 @@
             this.btnOriginal.UseVisualStyleBackColor = true;
             this.btnOriginal.Click += new System.EventHandler(this.btnOriginal_Click);
             // 
+            // btnRGB
+            // 
+            this.btnRGB.Location = new System.Drawing.Point(12, 289);
+            this.btnRGB.Name = "btnRGB";
+            this.btnRGB.Size = new System.Drawing.Size(75, 23);
+            this.btnRGB.TabIndex = 8;
+            this.btnRGB.Text = "RGB Bar";
+            this.btnRGB.UseVisualStyleBackColor = true;
+            this.btnRGB.Click += new System.EventHandler(this.btnRGB_Click);
+            // 
             // BitmapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 324);
+            this.Controls.Add(this.btnRGB);
             this.Controls.Add(this.btnOriginal);
             this.Controls.Add(this.btnTurnRight);
             this.Controls.Add(this.btnTurnLeft);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button btnTurnLeft;
         private System.Windows.Forms.Button btnTurnRight;
         private System.Windows.Forms.Button btnOriginal;
+        private System.Windows.Forms.Button btnRGB;
     }
 }
 

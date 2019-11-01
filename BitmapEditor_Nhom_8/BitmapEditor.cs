@@ -26,11 +26,15 @@ namespace BitmapEditor_Nhom_8
         private Form rbgBar;
         private String imagePath;
         private Bitmap bm = null;
+        private BitmapData bmData = null;
         private int scale = 0;
+        private int rValue = 0;
+        private int gValue = 0;
+        private int bValue = 0;
 
         private void openRBGBar()
         {
-            rbgBar = new RBGBar();
+            rbgBar = new RGBBar();
             Point position = this.Location;
             position.X = this.Right;
             rbgBar.Location = position;
@@ -60,7 +64,9 @@ namespace BitmapEditor_Nhom_8
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
 
-                openRBGBar();
+                rValue = 0;
+                gValue = 0;
+                bValue = 0;
             }
         }
 
@@ -71,6 +77,10 @@ namespace BitmapEditor_Nhom_8
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
                 scaleImage(scale);
+
+                rValue = 0;
+                gValue = 0;
+                bValue = 0;
             }
             else
             {
@@ -78,7 +88,6 @@ namespace BitmapEditor_Nhom_8
             }
         }
 
-        private BitmapData bmData = null;
         unsafe
         private void btnGray_Click(object sender, EventArgs e)
         {
@@ -181,6 +190,62 @@ namespace BitmapEditor_Nhom_8
             {
                 MessageBox.Show("You must open an image first!!", "Warning!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        unsafe
+        private void setRGB()
+        {
+            bmData = bm.LockBits(new Rectangle(0, 0, bm.Width, bm.Height), ImageLockMode.ReadWrite, bm.PixelFormat);
+            int offset = bmData.Stride - bm.Width * 3;
+            byte* p = (byte*)bmData.Scan0;
+
+            // Duyet anh bitmap
+            for (int i = 0; i < bm.Width; i++)
+            {
+                for (int j = 0; j < bm.Height; j++)
+                {
+                    //p[0] la xanh bien, p[1] la xanh la, p[2] la do
+                    p[0] += (byte)((double)p[0] * bValue / 100);
+                    p[1] += (byte)((double)p[1] * gValue / 100);
+                    p[2] += (byte)((double)p[2] * rValue / 100);
+
+                    p += 3;
+                }
+                p += offset;
+            }
+
+            // Unlock bits
+            bm.UnlockBits(bmData);
+            pictureBox1.Image = bm;
+
+            // Scale Image
+            scaleImage(scale);
+        }
+
+        private void btnRGB_Click(object sender, EventArgs e)
+        {
+            if (bm != null)
+            {
+                RGBBar rgb = new RGBBar(rValue, gValue, bValue);
+
+                if (rgb.ShowDialog() == DialogResult.OK)
+                {
+                    bm = new Bitmap(imagePath);
+                    pictureBox1.Image = bm;
+                    scaleImage(scale);
+
+                    rValue = rgb.getR();
+                    gValue = rgb.getG();
+                    bValue = rgb.getB();
+                    setRGB();
+                    //MessageBox.Show("R: " + Convert.ToString(rValue) + ", G: " + Convert.ToString(gValue) + ", B: " + Convert.ToString(bValue));
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must open an image first!!", "Warning!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
     }

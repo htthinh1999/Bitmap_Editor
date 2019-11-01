@@ -1,6 +1,6 @@
 ﻿namespace BitmapEditor_Nhom_8
 {
-    partial class RBGBar
+    partial class RGBBar
     {
         /// <summary>
         /// Required designer variable.
@@ -106,6 +106,7 @@
             // 
             // btnOK
             // 
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Location = new System.Drawing.Point(337, 40);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
@@ -122,7 +123,7 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // RBGBar
+            // RGBBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -135,7 +136,7 @@
             this.Controls.Add(this.trkBarB);
             this.Controls.Add(this.trkBarG);
             this.Controls.Add(this.trkBarR);
-            this.Name = "RBGBar";
+            this.Name = "RGBBar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RBGBar";
             ((System.ComponentModel.ISupportInitialize)(this.trkBarR)).EndInit();
