@@ -78,10 +78,6 @@ namespace BitmapEditor_Nhom_8
                 bm = new Bitmap(imagePath);
                 pictureBox1.Image = bm;
                 scaleImage(scale);
-
-                rValue = 0;
-                gValue = 0;
-                bValue = 0;
             }
             else
             {
