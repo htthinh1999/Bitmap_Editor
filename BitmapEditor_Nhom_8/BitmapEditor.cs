@@ -19,11 +19,6 @@ namespace BitmapEditor_Nhom_8
             InitializeComponent();
         }
 
-        private void BitmapEditor_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private Form rbgBar;
         private string imagePath;
         private Bitmap bm = null;
@@ -32,6 +27,7 @@ namespace BitmapEditor_Nhom_8
         private int rValue = 0;
         private int gValue = 0;
         private int bValue = 0;
+        private bool isSaved = false;
 
         private void openRBGBar()
         {
@@ -257,6 +253,20 @@ namespace BitmapEditor_Nhom_8
             {
                 bm.Save(Path.GetFullPath(saveDialog.FileName), ImageFormat.Jpeg);
                 MessageBox.Show("Image has been saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                isSaved = true;
+            }
+        }
+
+        private void BitmapEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (bm != null && !isSaved && MessageBox.Show("You didn't save image!! Do you want to save?", "Save Image?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                btnSave_Click(sender, e);
+            }
+            else if (MessageBox.Show("Do you want to close?", "Close Application?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
             }
         }
 

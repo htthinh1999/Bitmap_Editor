@@ -1,0 +1,10 @@
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\bin\Release\BitmapEditor_Nhom_8.exe.config
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.csprojResolveAssemblyReference.cache
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.BitmapEditor.resources
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.Properties.Resources.resources
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.RGBBar.resources
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.csproj.GenerateResource.Cache
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\bin\Release\BitmapEditor_Nhom_8.exe
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\bin\Release\BitmapEditor_Nhom_8.pdb
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.exe
+C:\Users\MON_MINA\documents\visual studio 2013\Projects\BitmapEditor_Nhom_8\BitmapEditor_Nhom_8\obj\Release\BitmapEditor_Nhom_8.pdb

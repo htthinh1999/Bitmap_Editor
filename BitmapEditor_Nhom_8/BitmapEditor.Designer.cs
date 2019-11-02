@@ -226,7 +226,7 @@
             this.Name = "BitmapEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bitmap Editor";
-            this.Load += new System.EventHandler(this.BitmapEditor_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BitmapEditor_FormClosing);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
