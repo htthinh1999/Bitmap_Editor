@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace BitmapEditor_Nhom_8
 {
@@ -24,7 +25,7 @@ namespace BitmapEditor_Nhom_8
         }
 
         private Form rbgBar;
-        private String imagePath;
+        private string imagePath;
         private Bitmap bm = null;
         private BitmapData bmData = null;
         private int scale = 0;
@@ -53,7 +54,7 @@ namespace BitmapEditor_Nhom_8
                 CheckPathExists = true,
 
                 DefaultExt = ".jpg",
-                Filter = "Image |*.bmp;*.jpg;*.jpeg;*.png",
+                Filter = "Image(*.bmp, *.jpg, *.jpeg) |*.bmp;*.jpg;*.jpeg",
                 //FilterIndex = 1,
                 RestoreDirectory = true,
             };
@@ -250,7 +251,17 @@ namespace BitmapEditor_Nhom_8
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bm.Save("C:\\HELLO.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            SaveFileDialog saveDialog = new SaveFileDialog();
+
+            saveDialog.FileName = Path.GetFileNameWithoutExtension(imagePath) + "-1.jpg";
+            saveDialog.DefaultExt = "jpg";
+            saveDialog.Filter = "JPG images (*.jpg)|*.jpg"; 
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                bm.Save(Path.GetFullPath(saveDialog.FileName), ImageFormat.Jpeg);
+                MessageBox.Show("Image has been saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
     }
