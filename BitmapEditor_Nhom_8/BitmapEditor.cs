@@ -247,7 +247,7 @@ namespace BitmapEditor_Nhom_8
 
             saveDialog.FileName = Path.GetFileNameWithoutExtension(imagePath) + "-1.jpg";
             saveDialog.DefaultExt = "jpg";
-            saveDialog.Filter = "JPG images (*.jpg)|*.jpg"; 
+            saveDialog.Filter = "JPG images (*.jpg)|*.jpg";
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {

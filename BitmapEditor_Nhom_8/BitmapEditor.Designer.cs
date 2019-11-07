@@ -37,8 +37,8 @@
             this.btnTurnRight = new System.Windows.Forms.Button();
             this.btnOriginal = new System.Windows.Forms.Button();
             this.btnRGB = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
+            this.lblGroup = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnl = new System.Windows.Forms.Panel();
@@ -132,29 +132,29 @@
             this.btnRGB.UseVisualStyleBackColor = true;
             this.btnRGB.Click += new System.EventHandler(this.btnRGB_Click);
             // 
-            // label1
+            // lblSubject
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblSubject.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 385);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "MÔN KỸ THUẬT ĐỒ HỌA";
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.Location = new System.Drawing.Point(131, 385);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(164, 15);
+            this.lblSubject.TabIndex = 9;
+            this.lblSubject.Text = "MÔN KỸ THUẬT ĐỒ HỌA";
             // 
-            // label2
+            // lblGroup
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 408);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "NHÓM 8: Thịnh 4A - Bắc 4A - Đình Đức 4A - Bảo 4B - Duy Đạt 4B - Viết Đức 4B";
+            this.lblGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right) 
+            | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblGroup.AutoSize = true;
+            this.lblGroup.Location = new System.Drawing.Point(23, 408);
+            this.lblGroup.Name = "lblGroup";
+            this.lblGroup.Size = new System.Drawing.Size(386, 13);
+            this.lblGroup.TabIndex = 10;
+            this.lblGroup.Text = "NHÓM 8: Thịnh 4A - Bắc 4A - Đình Đức 4A - Bảo 4B - Duy Đạt 4B - Viết Đức 4B";
             // 
             // label3
             // 
@@ -213,8 +213,8 @@
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblGroup);
+            this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.btnRGB);
             this.Controls.Add(this.btnOriginal);
             this.Controls.Add(this.btnTurnRight);
@@ -246,8 +246,8 @@
         private System.Windows.Forms.Button btnTurnRight;
         private System.Windows.Forms.Button btnOriginal;
         private System.Windows.Forms.Button btnRGB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.Label lblGroup;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel pnl;
